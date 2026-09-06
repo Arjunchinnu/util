@@ -3,8 +3,10 @@
 // import  FromLinkedList.*;
 // import FromStack.*;
 // import FromVector.*;
-import FromArrayDeque.*;
-
+// import FromArrayDeque.*;
+// import FromPriorityQueue.*;
+// import FromHashSet.*;
+import FromLinkedHashSet.*;
 import java.util.*;
 
 public class test {
@@ -30,20 +32,36 @@ public class test {
 
     // Vector <Integer> list = new Vector<>(Arrays.asList(60,60,40,90,80));
 
-    ArrayDeque <Integer> list = new ArrayDeque<>(Arrays.asList(60,60,40,90,80));
+    // ArrayDeque <Integer> list = new ArrayDeque<>(Arrays.asList(60,60,40,90,80));
+
+    // PriorityQueue <Integer> list = new PriorityQueue<>(Arrays.asList(60,60,40,90,80));
+
+    // HashSet <Integer> list = new HashSet<>(Arrays.asList(60,60,40,90,80));
+
+// HashMap<Integer, Integer> list = HashMap.of(
+//     1, 60,
+//     2, 60,
+//     3, 40,
+//     4, 90,
+//     5, 80
+// );
+
+// LinkedHashSet <Integer> list = new LinkedHashSet<>(Arrays.asList(60,60,40,90,80));
 
 
 
+
+    // System.out.println(list);
 
         Integer[] arr = Convert.toArray(list, new Integer[0]);
         ArrayList<Integer> res0 = Convert.toArrayList(list);
         Stack<Integer>  res1 = Convert.toStack(list);
         LinkedList<Integer> res2 = Convert.toLinkedList(list);
         Vector<Integer> res3 = Convert.toVector(list);
-        // ArrayDeque<Integer> res4 = Convert.toArrayDeque(list);
+        ArrayDeque<Integer> res4 = Convert.toArrayDeque(list);
         PriorityQueue<Integer> res5 = Convert.toPriorityQueue(list);
         HashSet<Integer> res6 = Convert.toHashSet(list);
-        LinkedHashSet<Integer> res7 = Convert.toLinkedHashSet(list);
+        // LinkedHashSet<Integer> res7 = Convert.toLinkedHashSet(list);
         TreeSet<Integer> res8 = Convert.toTreeSet(list);
         HashMap<Integer,Integer> res9 = Convert.toHashMap(list);
         TreeMap<Integer,Integer> res10 = Convert.toTreeMap(list);
@@ -54,10 +72,10 @@ public class test {
         System.out.println("st"+res1);
         System.out.println("ll"+res2);
         System.out.println("vt"+res3);
-        // System.out.println("Ar"+res4);
+        System.out.println("Ar"+res4);
         System.out.println("pr"+res5);
         System.out.println("hs"+res6);
-        System.out.println("lhs"+res7);
+        // System.out.println("lhs"+res7);
         System.out.println("TS"+res8);
         System.out.println("HM"+res9);
         System.out.println("TM"+res10);
