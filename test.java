@@ -8,7 +8,9 @@
 // import FromHashSet.*;
 // import FromLinkedHashSet.*;
 // import FromTreeSet.*;
-import FromHashMap.*;
+// import FromHashMap.*;
+// import  FromLinkedHashMap.*;
+import FromTreeMap.*;
 import java.util.*;
 
 public class test {
@@ -40,18 +42,38 @@ public class test {
 
     // HashSet <Integer> list = new HashSet<>(Arrays.asList(60,60,40,90,80));
 
-HashMap<Integer, Integer> list = new HashMap<>();
+// HashMap<Integer, Integer> list = new HashMap<>();
 
-list.put(1, 60);
-list.put(2, 60);
-list.put(3, 40);
-list.put(4, 90);
-list.put(5, 80);
+// list.put(1, 60);
+// list.put(2, 60);
+// list.put(3, 40);
+// list.put(4, 90);
+// list.put(5, 80);
 
 // LinkedHashSet <Integer> list = new LinkedHashSet<>(Arrays.asList(60,60,40,90,80));
 
 // TreeSet <Integer> list = new TreeSet<>(Arrays.asList(60,60,40,90,80));
 
+// LinkedHashMap<Integer, String> list = new LinkedHashMap<>();
+// list.put(1, "Apple");
+// list.put(2, "Banana");
+// list.put(3, "Banana");
+
+// System.out.println(list); // {1=Apple, 2=Banana}
+
+
+
+// LinkedHashMap<Integer, Integer> list = new LinkedHashMap<>();
+// list.put(1, 60);
+// list.put(2, 90);
+
+// System.out.println(list); // {1=60, 2=90}
+
+
+TreeMap<Integer, Integer> list = new TreeMap<>();
+list.put(1, 60);
+list.put(2, 90);
+System.out.println(list); // {1=Apple, 2=Banana}
 
 
 
@@ -67,8 +89,8 @@ list.put(5, 80);
         HashSet<Integer> res6 = Convert.toHashSet(list);
         LinkedHashSet<Integer> res7 = Convert.toLinkedHashSet(list);
         TreeSet<Integer> res8 = Convert.toTreeSet(list);
-        // HashMap<Integer,Integer> res9 = Convert.toHashMap(list);
-        TreeMap<Integer,Integer> res10 = Convert.toTreeMap(list);
+        HashMap<Integer,Integer> res9 = Convert.toHashMap(list);
+        // TreeMap<Integer,Integer> res10 = Convert.toTreeMap(list);
 
 
         System.out.println("arr "+Arrays.toString(arr));
@@ -81,8 +103,8 @@ list.put(5, 80);
         System.out.println("hs"+res6);
         System.out.println("lhs"+res7);
         System.out.println("TS"+res8);
-        // System.out.println("HM"+res9);
-        System.out.println("TM"+res10);
+        System.out.println("HM"+res9);
+        // System.out.println("TM"+res10);
 
         String str = "Arjun";
 
