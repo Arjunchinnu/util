@@ -1,5 +1,6 @@
 // import FromArray.Convert;
- import FromArrayList.Convert;
+//  import FromArrayList.Convert;
+import  FromLinkedList.*;
 import java.util.*;
 
 public class test {
@@ -15,12 +16,14 @@ public class test {
         // Integer[] arr = {6, 4, 9, 8};
         Character[] arrchar = {'a','b','c','d'};
 
-        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(60,60,40,90,80));
+        // ArrayList<Integer> list = new ArrayList<>(Arrays.asList(60,60,40,90,80));
 
-        Integer[] arr = FromArrayList.Convert.toArray(list, new Integer[0]);
-        // ArrayList<Integer> res0 = Convert.toArrayList(null);
+        LinkedList <Integer> list = new LinkedList<>(Arrays.asList(60,60,40,90,80));
+
+        Integer[] arr = FromLinkedList.Convert.toArray(list, new Integer[0]);
+        ArrayList<Integer> res0 = Convert.toArrayList(list);
         Stack<Integer>  res1 = Convert.toStack(list);
-        LinkedList<Integer> res2 = Convert.toLinkedList(list);
+        // LinkedList<Integer> res2 = Convert.toLinkedList(list);
         Vector<Integer> res3 = Convert.toVector(list);
         ArrayDeque<Integer> res4 = Convert.toArrayDeque(list);
         PriorityQueue<Integer> res5 = Convert.toPriorityQueue(list);
@@ -34,7 +37,7 @@ public class test {
         System.out.println("arr "+Arrays.toString(arr));
         // System.out.println("al"+res0);
         System.out.println("st"+res1);
-        System.out.println("ll"+res2);
+        // System.out.println("ll"+res2);
         System.out.println("vt"+res3);
         System.out.println("Ar"+res4);
         System.out.println("pr"+res5);
@@ -43,6 +46,10 @@ public class test {
         System.out.println("TS"+res8);
         System.out.println("HM"+res9);
         System.out.println("TM"+res10);
+
+        String str = "Arjun";
+
+        // System.out.println(str.charAt(1));
 
         
     }
