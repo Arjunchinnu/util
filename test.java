@@ -46,7 +46,7 @@ public class test {
 //     5, 80
 // );
 
-// LinkedHashSet <Integer> list = new LinkedHashSet<>(Arrays.asList(60,60,40,90,80));
+LinkedHashSet <Integer> list = new LinkedHashSet<>(Arrays.asList(60,60,40,90,80));
 
 
 
