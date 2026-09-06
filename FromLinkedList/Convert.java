@@ -6,6 +6,11 @@ public class Convert {
 
     // LinkedList → Array
     public static <T> T[] toArray(LinkedList<T> list, T[] arr) {
+
+        if (list == null || list.isEmpty()) {
+            return arr;
+        }
+
         return list.toArray(arr);
     }
 
@@ -14,6 +19,10 @@ public class Convert {
     public static <T> ArrayList<T> toArrayList(LinkedList<T> list) {
 
         ArrayList<T> arrayList = new ArrayList<>();
+
+        if (list == null || list.isEmpty()) {
+            return arrayList;
+        }
 
         for (T ele : list) {
             arrayList.add(ele);
@@ -28,6 +37,10 @@ public class Convert {
 
         Stack<T> stack = new Stack<>();
 
+        if (list == null || list.isEmpty()) {
+            return stack;
+        }
+
         for (T ele : list) {
             stack.push(ele);
         }
@@ -41,6 +54,10 @@ public class Convert {
 
         Vector<T> vector = new Vector<>();
 
+        if (list == null || list.isEmpty()) {
+            return vector;
+        }
+
         for (T ele : list) {
             vector.add(ele);
         }
@@ -53,6 +70,10 @@ public class Convert {
     public static <T> ArrayDeque<T> toArrayDeque(LinkedList<T> list) {
 
         ArrayDeque<T> deque = new ArrayDeque<>();
+
+        if (list == null || list.isEmpty()) {
+            return deque;
+        }
 
         for (T ele : list) {
             deque.add(ele);
@@ -68,6 +89,10 @@ public class Convert {
 
         PriorityQueue<T> queue = new PriorityQueue<>();
 
+        if (list == null || list.isEmpty()) {
+            return queue;
+        }
+
         for (T ele : list) {
             queue.add(ele);
         }
@@ -80,6 +105,10 @@ public class Convert {
     public static <T> HashSet<T> toHashSet(LinkedList<T> list) {
 
         HashSet<T> set = new HashSet<>();
+
+        if (list == null || list.isEmpty()) {
+            return set;
+        }
 
         for (T ele : list) {
             set.add(ele);
@@ -95,6 +124,10 @@ public class Convert {
 
         LinkedHashSet<T> linkedSet = new LinkedHashSet<>();
 
+        if (list == null || list.isEmpty()) {
+            return linkedSet;
+        }
+
         for (T ele : list) {
             linkedSet.add(ele);
         }
@@ -108,6 +141,10 @@ public class Convert {
     TreeSet<T> toTreeSet(LinkedList<T> list) {
 
         TreeSet<T> treeSet = new TreeSet<>();
+
+        if (list == null || list.isEmpty()) {
+            return treeSet;
+        }
 
         for (T ele : list) {
             treeSet.add(ele);
@@ -124,6 +161,10 @@ public class Convert {
 
         HashMap<Integer, T> hashMap = new HashMap<>();
 
+        if (list == null || list.isEmpty()) {
+            return hashMap;
+        }
+
         for (int i = 0; i < list.size(); i++) {
             hashMap.put(i, list.get(i));
         }
@@ -134,9 +175,14 @@ public class Convert {
 
     // LinkedList → TreeMap
     // index → element
-    public static <T> TreeMap<Integer, T> toTreeMap(LinkedList<T> list) {
+    public static <T> TreeMap<Integer, T> toTreeMap(
+            LinkedList<T> list) {
 
         TreeMap<Integer, T> treeMap = new TreeMap<>();
+
+        if (list == null || list.isEmpty()) {
+            return treeMap;
+        }
 
         for (int i = 0; i < list.size(); i++) {
             treeMap.put(i, list.get(i));
