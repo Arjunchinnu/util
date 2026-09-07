@@ -163,41 +163,154 @@ public class Convert {
         return treeSet;
     }
 
+    
+    
+//HashMap
+
+      // ArrayList → HashMap<Integer, T>
+    // public static <T> HashMap<Integer, T> toIntegerHashMap(ArrayList<T> list) {
+
+    //     HashMap<Integer, T> hashmap = new HashMap<>();
+
+    //     if (list == null || list.isEmpty()) {
+    //         return hashmap;
+    //     }
+
+    //     for (int i = 0; i < list.size(); i++) {
+    //         hashmap.put(i, list.get(i));
+    //     }
+
+    //     return hashmap;
+    // }
+
+
+    // // ArrayList → HashMap<Character, T>
+    // public static <T> HashMap<Character, T> toCharacterHashMap(ArrayList<T> list) {
+
+    //     HashMap<Character, T> hashmap = new HashMap<>();
+
+    //     if (list == null || list.isEmpty()) {
+    //         return hashmap;
+    //     }
+
+    //     char key = 'a';
+
+    //     for (int i = 0; i < list.size(); i++) {
+    //         hashmap.put(key++, list.get(i));
+    //     }
+
+    //     return hashmap;
+    // }
 
     // ArrayList → HashMap
     // index → element
-    public static <T> HashMap<Integer, T> toHashMap(
-            ArrayList<T> list) {
+    // public static <T> HashMap<Integer, T> toHashMap(
+    //         ArrayList<T> list) {
 
-        HashMap<Integer, T> hashMap = new HashMap<>();
+    //     HashMap<Integer, T> hashMap = new HashMap<>();
 
-        if (list == null || list.isEmpty()) {
-            return hashMap;
-        }
+    //     if (list == null || list.isEmpty()) {
+    //         return hashMap;
+    //     }
 
-        for (int i = 0; i < list.size(); i++) {
-            hashMap.put(i, list.get(i));
-        }
+    //     for (int i = 0; i < list.size(); i++) {
+    //         hashMap.put(i, list.get(i));
+    //     }
 
-        return hashMap;
-    }
+    //     return hashMap;
+    // }
 
 
     // ArrayList → TreeMap
     // index → element
-    public static <T> TreeMap<Integer, T> toTreeMap(
-            ArrayList<T> list) {
+    // public static <T> TreeMap<Integer, T> toTreeMap(
+    //         ArrayList<T> list) {
 
-        TreeMap<Integer, T> treeMap = new TreeMap<>();
+    //     TreeMap<Integer, T> treeMap = new TreeMap<>();
+
+    //     if (list == null || list.isEmpty()) {
+    //         return treeMap;
+    //     }
+
+    //     for (int i = 0; i < list.size(); i++) {
+    //         treeMap.put(i, list.get(i));
+    //     }
+
+    //     return treeMap;
+    // }
+
+    //TreeMap
+
+
+    // ArrayList → HashMap<Integer, T>
+    public static <T> HashMap<Integer, T> toIntegerHashMap(ArrayList<T> list) {
+
+        HashMap<Integer, T> hashmap = new HashMap<>();
 
         if (list == null || list.isEmpty()) {
-            return treeMap;
+            return hashmap;
         }
 
         for (int i = 0; i < list.size(); i++) {
-            treeMap.put(i, list.get(i));
+            hashmap.put(i, list.get(i));
         }
 
-        return treeMap;
+        return hashmap;
     }
+
+
+    // ArrayList → HashMap<Character, T>
+    public static <T> HashMap<Character, T> toCharacterHashMap(ArrayList<T> list) {
+
+        HashMap<Character, T> hashmap = new HashMap<>();
+
+        if (list == null || list.isEmpty()) {
+            return hashmap;
+        }
+
+        char key = 'a';
+
+        for (int i = 0; i < list.size(); i++) {
+            hashmap.put(key++, list.get(i));
+        }
+
+        return hashmap;
+    }
+
+
+    // ArrayList → TreeMap<Integer, T>
+    public static <T> TreeMap<Integer, T> toIntegerTreeMap(ArrayList<T> list) {
+
+        TreeMap<Integer, T> treemap = new TreeMap<>();
+
+        if (list == null || list.isEmpty()) {
+            return treemap;
+        }
+
+        for (int i = 0; i < list.size(); i++) {
+            treemap.put(i, list.get(i));
+        }
+
+        return treemap;
+    }
+
+
+    // ArrayList → TreeMap<Character, T>
+    public static <T> TreeMap<Character, T> toCharacterTreeMap(ArrayList<T> list) {
+
+        TreeMap<Character, T> treemap = new TreeMap<>();
+
+        if (list == null || list.isEmpty()) {
+            return treemap;
+        }
+
+        char key = 'a';
+
+        for (int i = 0; i < list.size(); i++) {
+            treemap.put(key++, list.get(i));
+        }
+
+        return treemap;
+    }
+
 }

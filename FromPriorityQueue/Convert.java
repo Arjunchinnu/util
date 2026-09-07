@@ -154,46 +154,123 @@ public class Convert {
     }
 
 
-    // PriorityQueue → HashMap
-    // index → element
-    public static <T> HashMap<Integer, T> toHashMap(
-            PriorityQueue<T> queue) {
+    // PriorityQueue → HashMap<Integer, T>
+    public static <T> HashMap<Integer, T> toIntegerHashMap(PriorityQueue<T> queue) {
 
-        HashMap<Integer, T> hashMap = new HashMap<>();
+        HashMap<Integer, T> hashmap = new HashMap<>();
 
         if (queue == null || queue.isEmpty()) {
-            return hashMap;
+            return hashmap;
         }
 
-        int index = 0;
+        int i = 0;
 
-        for (T ele : queue) {
-            hashMap.put(index, ele);
-            index++;
+        for (T value : queue) {
+            hashmap.put(i++, value);
         }
 
-        return hashMap;
+        return hashmap;
     }
 
 
-    // PriorityQueue → TreeMap
-    // index → element
-    public static <T> TreeMap<Integer, T> toTreeMap(
-            PriorityQueue<T> queue) {
+    // PriorityQueue → HashMap<Character, T>
+    public static <T> HashMap<Character, T> toCharacterHashMap(PriorityQueue<T> queue) {
 
-        TreeMap<Integer, T> treeMap = new TreeMap<>();
+        HashMap<Character, T> hashmap = new HashMap<>();
 
         if (queue == null || queue.isEmpty()) {
-            return treeMap;
+            return hashmap;
         }
 
-        int index = 0;
+        char key = 'a';
 
-        for (T ele : queue) {
-            treeMap.put(index, ele);
-            index++;
+        for (T value : queue) {
+            hashmap.put(key++, value);
         }
 
-        return treeMap;
+        return hashmap;
     }
+
+
+    // PriorityQueue → TreeMap<Integer, T>
+    public static <T> TreeMap<Integer, T> toIntegerTreeMap(PriorityQueue<T> queue) {
+
+        TreeMap<Integer, T> treemap = new TreeMap<>();
+
+        if (queue == null || queue.isEmpty()) {
+            return treemap;
+        }
+
+        int i = 0;
+
+        for (T value : queue) {
+            treemap.put(i++, value);
+        }
+
+        return treemap;
+    }
+
+
+    // PriorityQueue → TreeMap<Character, T>
+    public static <T> TreeMap<Character, T> toCharacterTreeMap(PriorityQueue<T> queue) {
+
+        TreeMap<Character, T> treemap = new TreeMap<>();
+
+        if (queue == null || queue.isEmpty()) {
+            return treemap;
+        }
+
+        char key = 'a';
+
+        for (T value : queue) {
+            treemap.put(key++, value);
+        }
+
+        return treemap;
+    }
+
+
+
+    // // PriorityQueue → HashMap
+    // // index → element
+    // public static <T> HashMap<Integer, T> toHashMap(
+    //         PriorityQueue<T> queue) {
+
+    //     HashMap<Integer, T> hashMap = new HashMap<>();
+
+    //     if (queue == null || queue.isEmpty()) {
+    //         return hashMap;
+    //     }
+
+    //     int index = 0;
+
+    //     for (T ele : queue) {
+    //         hashMap.put(index, ele);
+    //         index++;
+    //     }
+
+    //     return hashMap;
+    // }
+
+
+    // // PriorityQueue → TreeMap
+    // // index → element
+    // public static <T> TreeMap<Integer, T> toTreeMap(
+    //         PriorityQueue<T> queue) {
+
+    //     TreeMap<Integer, T> treeMap = new TreeMap<>();
+
+    //     if (queue == null || queue.isEmpty()) {
+    //         return treeMap;
+    //     }
+
+    //     int index = 0;
+
+    //     for (T ele : queue) {
+    //         treeMap.put(index, ele);
+    //         index++;
+    //     }
+
+    //     return treeMap;
+    // }
 }

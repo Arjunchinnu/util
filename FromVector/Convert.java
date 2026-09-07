@@ -154,40 +154,113 @@ public class Convert {
     }
 
 
-    // Vector → HashMap
-    // index → element
-    public static <T> HashMap<Integer, T> toHashMap(
-            Vector<T> vector) {
+    // Vector → HashMap<Integer, T>
+    public static <T> HashMap<Integer, T> toIntegerHashMap(Vector<T> vector) {
 
-        HashMap<Integer, T> hashMap = new HashMap<>();
+        HashMap<Integer, T> hashmap = new HashMap<>();
 
         if (vector == null || vector.isEmpty()) {
-            return hashMap;
+            return hashmap;
         }
 
         for (int i = 0; i < vector.size(); i++) {
-            hashMap.put(i, vector.get(i));
+            hashmap.put(i, vector.get(i));
         }
 
-        return hashMap;
+        return hashmap;
     }
+
+
+    // Vector → HashMap<Character, T>
+    public static <T> HashMap<Character, T> toCharacterHashMap(Vector<T> vector) {
+
+        HashMap<Character, T> hashmap = new HashMap<>();
+
+        if (vector == null || vector.isEmpty()) {
+            return hashmap;
+        }
+
+        char key = 'a';
+
+        for (int i = 0; i < vector.size(); i++) {
+            hashmap.put(key++, vector.get(i));
+        }
+
+        return hashmap;
+    }
+
+
+    // Vector → TreeMap<Integer, T>
+    public static <T> TreeMap<Integer, T> toIntegerTreeMap(Vector<T> vector) {
+
+        TreeMap<Integer, T> treemap = new TreeMap<>();
+
+        if (vector == null || vector.isEmpty()) {
+            return treemap;
+        }
+
+        for (int i = 0; i < vector.size(); i++) {
+            treemap.put(i, vector.get(i));
+        }
+
+        return treemap;
+    }
+
+
+    // Vector → TreeMap<Character, T>
+    public static <T> TreeMap<Character, T> toCharacterTreeMap(Vector<T> vector) {
+
+        TreeMap<Character, T> treemap = new TreeMap<>();
+
+        if (vector == null || vector.isEmpty()) {
+            return treemap;
+        }
+
+        char key = 'a';
+
+        for (int i = 0; i < vector.size(); i++) {
+            treemap.put(key++, vector.get(i));
+        }
+
+        return treemap;
+    }
+
+
+
+    // Vector → HashMap
+    // index → element
+    // public static <T> HashMap<Integer, T> toHashMap(
+    //         Vector<T> vector) {
+
+    //     HashMap<Integer, T> hashMap = new HashMap<>();
+
+    //     if (vector == null || vector.isEmpty()) {
+    //         return hashMap;
+    //     }
+
+    //     for (int i = 0; i < vector.size(); i++) {
+    //         hashMap.put(i, vector.get(i));
+    //     }
+
+    //     return hashMap;
+    // }
 
 
     // Vector → TreeMap
     // index → element
-    public static <T> TreeMap<Integer, T> toTreeMap(
-            Vector<T> vector) {
+    // public static <T> TreeMap<Integer, T> toTreeMap(
+    //         Vector<T> vector) {
 
-        TreeMap<Integer, T> treeMap = new TreeMap<>();
+    //     TreeMap<Integer, T> treeMap = new TreeMap<>();
 
-        if (vector == null || vector.isEmpty()) {
-            return treeMap;
-        }
+    //     if (vector == null || vector.isEmpty()) {
+    //         return treeMap;
+    //     }
 
-        for (int i = 0; i < vector.size(); i++) {
-            treeMap.put(i, vector.get(i));
-        }
+    //     for (int i = 0; i < vector.size(); i++) {
+    //         treeMap.put(i, vector.get(i));
+    //     }
 
-        return treeMap;
-    }
+    //     return treeMap;
+    // }
 }

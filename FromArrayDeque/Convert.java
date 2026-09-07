@@ -154,46 +154,124 @@ public class Convert {
     }
 
 
+    // ArrayDeque → HashMap<Integer, T>
+    public static <T> HashMap<Integer, T> toIntegerHashMap(ArrayDeque<T> deque) {
+
+        HashMap<Integer, T> hashmap = new HashMap<>();
+
+        if (deque == null || deque.isEmpty()) {
+            return hashmap;
+        }
+
+        int i = 0;
+
+        for (T value : deque) {
+            hashmap.put(i++, value);
+        }
+
+        return hashmap;
+    }
+
+
+    // ArrayDeque → HashMap<Character, T>
+    public static <T> HashMap<Character, T> toCharacterHashMap(ArrayDeque<T> deque) {
+
+        HashMap<Character, T> hashmap = new HashMap<>();
+
+        if (deque == null || deque.isEmpty()) {
+            return hashmap;
+        }
+
+        char key = 'a';
+
+        for (T value : deque) {
+            hashmap.put(key++, value);
+        }
+
+        return hashmap;
+    }
+
+
+    // ArrayDeque → TreeMap<Integer, T>
+    public static <T> TreeMap<Integer, T> toIntegerTreeMap(ArrayDeque<T> deque) {
+
+        TreeMap<Integer, T> treemap = new TreeMap<>();
+
+        if (deque == null || deque.isEmpty()) {
+            return treemap;
+        }
+
+        int i = 0;
+
+        for (T value : deque) {
+            treemap.put(i++, value);
+        }
+
+        return treemap;
+    }
+
+
+    // ArrayDeque → TreeMap<Character, T>
+    public static <T> TreeMap<Character, T> toCharacterTreeMap(ArrayDeque<T> deque) {
+
+        TreeMap<Character, T> treemap = new TreeMap<>();
+
+        if (deque == null || deque.isEmpty()) {
+            return treemap;
+        }
+
+        char key = 'a';
+
+        for (T value : deque) {
+            treemap.put(key++, value);
+        }
+
+        return treemap;
+    }
+
+
+
+
     // ArrayDeque → HashMap
     // index → element
-    public static <T> HashMap<Integer, T> toHashMap(
-            ArrayDeque<T> deque) {
+    // public static <T> HashMap<Integer, T> toHashMap(
+    //         ArrayDeque<T> deque) {
 
-        HashMap<Integer, T> hashMap = new HashMap<>();
+    //     HashMap<Integer, T> hashMap = new HashMap<>();
 
-        if (deque == null || deque.isEmpty()) {
-            return hashMap;
-        }
+    //     if (deque == null || deque.isEmpty()) {
+    //         return hashMap;
+    //     }
 
-        int index = 0;
+    //     int index = 0;
 
-        for (T ele : deque) {
-            hashMap.put(index, ele);
-            index++;
-        }
+    //     for (T ele : deque) {
+    //         hashMap.put(index, ele);
+    //         index++;
+    //     }
 
-        return hashMap;
-    }
+    //     return hashMap;
+    // }
 
 
-    // ArrayDeque → TreeMap
-    // index → element
-    public static <T> TreeMap<Integer, T> toTreeMap(
-            ArrayDeque<T> deque) {
+    // // ArrayDeque → TreeMap
+    // // index → element
+    // public static <T> TreeMap<Integer, T> toTreeMap(
+    //         ArrayDeque<T> deque) {
 
-        TreeMap<Integer, T> treeMap = new TreeMap<>();
+    //     TreeMap<Integer, T> treeMap = new TreeMap<>();
 
-        if (deque == null || deque.isEmpty()) {
-            return treeMap;
-        }
+    //     if (deque == null || deque.isEmpty()) {
+    //         return treeMap;
+    //     }
 
-        int index = 0;
+    //     int index = 0;
 
-        for (T ele : deque) {
-            treeMap.put(index, ele);
-            index++;
-        }
+    //     for (T ele : deque) {
+    //         treeMap.put(index, ele);
+    //         index++;
+    //     }
 
-        return treeMap;
-    }
+    //     return treeMap;
+    // }
 }

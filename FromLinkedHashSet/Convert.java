@@ -172,48 +172,125 @@ public class Convert {
     }
 
 
+    // LinkedHashSet → HashMap<Integer, T>
+    public static <T> HashMap<Integer, T> toIntegerHashMap(LinkedHashSet<T> set) {
+
+        HashMap<Integer, T> hashmap = new HashMap<>();
+
+        if (set == null || set.isEmpty()) {
+            return hashmap;
+        }
+
+        int i = 0;
+
+        for (T value : set) {
+            hashmap.put(i++, value);
+        }
+
+        return hashmap;
+    }
+
+
+    // LinkedHashSet → HashMap<Character, T>
+    public static <T> HashMap<Character, T> toCharacterHashMap(LinkedHashSet<T> set) {
+
+        HashMap<Character, T> hashmap = new HashMap<>();
+
+        if (set == null || set.isEmpty()) {
+            return hashmap;
+        }
+
+        char key = 'a';
+
+        for (T value : set) {
+            hashmap.put(key++, value);
+        }
+
+        return hashmap;
+    }
+
+
+    // LinkedHashSet → TreeMap<Integer, T>
+    public static <T> TreeMap<Integer, T> toIntegerTreeMap(LinkedHashSet<T> set) {
+
+        TreeMap<Integer, T> treemap = new TreeMap<>();
+
+        if (set == null || set.isEmpty()) {
+            return treemap;
+        }
+
+        int i = 0;
+
+        for (T value : set) {
+            treemap.put(i++, value);
+        }
+
+        return treemap;
+    }
+
+
+    // LinkedHashSet → TreeMap<Character, T>
+    public static <T> TreeMap<Character, T> toCharacterTreeMap(LinkedHashSet<T> set) {
+
+        TreeMap<Character, T> treemap = new TreeMap<>();
+
+        if (set == null || set.isEmpty()) {
+            return treemap;
+        }
+
+        char key = 'a';
+
+        for (T value : set) {
+            treemap.put(key++, value);
+        }
+
+        return treemap;
+    }
+
+
+
     // LinkedHashSet → HashMap
     // index → element
 
-    public static <T> HashMap<Integer, T> toHashMap(
-            LinkedHashSet<T> set) {
+    // public static <T> HashMap<Integer, T> toHashMap(
+    //         LinkedHashSet<T> set) {
 
-        HashMap<Integer, T> hashMap = new HashMap<>();
+    //     HashMap<Integer, T> hashMap = new HashMap<>();
 
-        if (set == null || set.isEmpty()) {
-            return hashMap;
-        }
+    //     if (set == null || set.isEmpty()) {
+    //         return hashMap;
+    //     }
 
-        int i = 0;
+    //     int i = 0;
 
-        for (T ele : set) {
-            hashMap.put(i, ele);
-            i++;
-        }
+    //     for (T ele : set) {
+    //         hashMap.put(i, ele);
+    //         i++;
+    //     }
 
-        return hashMap;
-    }
+    //     return hashMap;
+    // }
 
 
-    // LinkedHashSet → TreeMap
-    // index → element
+    // // LinkedHashSet → TreeMap
+    // // index → element
 
-    public static <T> TreeMap<Integer, T> toTreeMap(
-            LinkedHashSet<T> set) {
+    // public static <T> TreeMap<Integer, T> toTreeMap(
+    //         LinkedHashSet<T> set) {
 
-        TreeMap<Integer, T> treeMap = new TreeMap<>();
+    //     TreeMap<Integer, T> treeMap = new TreeMap<>();
 
-        if (set == null || set.isEmpty()) {
-            return treeMap;
-        }
+    //     if (set == null || set.isEmpty()) {
+    //         return treeMap;
+    //     }
 
-        int i = 0;
+    //     int i = 0;
 
-        for (T ele : set) {
-            treeMap.put(i, ele);
-            i++;
-        }
+    //     for (T ele : set) {
+    //         treeMap.put(i, ele);
+    //         i++;
+    //     }
 
-        return treeMap;
-    }
+    //     return treeMap;
+    // }
 }

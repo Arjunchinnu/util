@@ -154,40 +154,115 @@ public class Convert {
     }
 
 
-    // LinkedList → HashMap
-    // index → element
-    public static <T> HashMap<Integer, T> toHashMap(
-            LinkedList<T> list) {
+      // ArrayList → HashMap<Integer, T>
 
-        HashMap<Integer, T> hashMap = new HashMap<>();
+    // LinkedList → HashMap<Integer, T>
+    
+    public static <T> HashMap<Integer, T> toIntegerHashMap(LinkedList<T> list) {
+
+        HashMap<Integer, T> hashmap = new HashMap<>();
 
         if (list == null || list.isEmpty()) {
-            return hashMap;
+            return hashmap;
         }
 
         for (int i = 0; i < list.size(); i++) {
-            hashMap.put(i, list.get(i));
+            hashmap.put(i, list.get(i));
         }
 
-        return hashMap;
+        return hashmap;
     }
+
+
+    // LinkedList → HashMap<Character, T>
+    public static <T> HashMap<Character, T> toCharacterHashMap(LinkedList<T> list) {
+
+        HashMap<Character, T> hashmap = new HashMap<>();
+
+        if (list == null || list.isEmpty()) {
+            return hashmap;
+        }
+
+        char key = 'a';
+
+        for (int i = 0; i < list.size(); i++) {
+            hashmap.put(key++, list.get(i));
+        }
+
+        return hashmap;
+    }
+
+
+    // LinkedList → TreeMap<Integer, T>
+    public static <T> TreeMap<Integer, T> toIntegerTreeMap(LinkedList<T> list) {
+
+        TreeMap<Integer, T> treemap = new TreeMap<>();
+
+        if (list == null || list.isEmpty()) {
+            return treemap;
+        }
+
+        for (int i = 0; i < list.size(); i++) {
+            treemap.put(i, list.get(i));
+        }
+
+        return treemap;
+    }
+
+
+    // LinkedList → TreeMap<Character, T>
+    public static <T> TreeMap<Character, T> toCharacterTreeMap(LinkedList<T> list) {
+
+        TreeMap<Character, T> treemap = new TreeMap<>();
+
+        if (list == null || list.isEmpty()) {
+            return treemap;
+        }
+
+        char key = 'a';
+
+        for (int i = 0; i < list.size(); i++) {
+            treemap.put(key++, list.get(i));
+        }
+
+        return treemap;
+    }
+
+
+    // LinkedList → HashMap
+    // index → element
+    // public static <T> HashMap<Integer, T> toHashMap(
+    //         LinkedList<T> list) {
+
+    //     HashMap<Integer, T> hashMap = new HashMap<>();
+
+    //     if (list == null || list.isEmpty()) {
+    //         return hashMap;
+    //     }
+
+    //     for (int i = 0; i < list.size(); i++) {
+    //         hashMap.put(i, list.get(i));
+    //     }
+
+    //     return hashMap;
+    // }
 
 
     // LinkedList → TreeMap
-    // index → element
-    public static <T> TreeMap<Integer, T> toTreeMap(
-            LinkedList<T> list) {
+    // // index → element
+    // public static <T> TreeMap<Integer, T> toTreeMap(
+    //         LinkedList<T> list) {
 
-        TreeMap<Integer, T> treeMap = new TreeMap<>();
+    //     TreeMap<Integer, T> treeMap = new TreeMap<>();
 
-        if (list == null || list.isEmpty()) {
-            return treeMap;
-        }
+    //     if (list == null || list.isEmpty()) {
+    //         return treeMap;
+    //     }
 
-        for (int i = 0; i < list.size(); i++) {
-            treeMap.put(i, list.get(i));
-        }
+    //     for (int i = 0; i < list.size(); i++) {
+    //         treeMap.put(i, list.get(i));
+    //     }
 
-        return treeMap;
-    }
+    //     return treeMap;
+    // }
 }

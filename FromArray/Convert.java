@@ -1,8 +1,8 @@
 package FromArray;
 
+import java.nio.charset.CharacterCodingException;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
-import java.util.Deque;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
@@ -177,8 +177,8 @@ public class Convert {
 
 
 //HashMap
-
-    public static <T> HashMap<Integer,T> toHashMap(T[] arr) {
+    
+    public static <T> HashMap <Integer,T> toIntegerHashMap(T[] arr) {
 
         HashMap<Integer,T > hashmap = new HashMap<>();
 
@@ -194,9 +194,29 @@ public class Convert {
     }
 
 
+     
+    public static <T> HashMap <Character,T> toCharacterHashMap(T[] arr) {
+
+        HashMap<Character,T > hashmap = new HashMap<>();
+
+        if (arr == null || arr.length == 0) {
+        return hashmap;
+        }
+
+        char key = 'a';
+
+        for (int i = 0; i < arr.length; i++) {
+            hashmap.put(key++, arr[i]);
+        }
+
+        return hashmap;
+    }
+
+
+
     //TreeMap
 
-    public static <T> TreeMap<Integer, T> toTreeMap(T[] arr) {
+    public static <T> TreeMap<Integer, T> toIntegerTreeMap(T[] arr) {
 
             TreeMap<Integer, T> treemap = new TreeMap<>();
 
@@ -207,6 +227,24 @@ public class Convert {
             for (int i = 0; i < arr.length; i++) {
                 treemap.put(i, arr[i]);
             }
+
+            return treemap;
+        }
+
+        public static <T> TreeMap<Character, T> toCharacterTreeMap(T[] arr) {
+
+            TreeMap<Character, T> treemap = new TreeMap<>();
+
+            if (arr == null || arr.length == 0) {
+            return treemap;
+         }
+
+           
+        char key = 'a';
+
+        for (int i = 0; i < arr.length; i++) {
+            treemap.put(key++, arr[i]);
+        }
 
             return treemap;
         }
