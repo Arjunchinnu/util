@@ -1,10 +1,10 @@
 package FromArray;
 
-import java.nio.charset.CharacterCodingException;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.PriorityQueue;
@@ -248,5 +248,41 @@ public class Convert {
 
             return treemap;
         }
+
+
+        // LinkedHashMap
+
+public static <T> LinkedHashMap<Integer, T> toIntegerLinkedHashMap(T[] arr) {
+
+    LinkedHashMap<Integer, T> linkedHashMap = new LinkedHashMap<>();
+
+    if (arr == null || arr.length == 0) {
+        return linkedHashMap;
+    }
+
+    for (int i = 0; i < arr.length; i++) {
+        linkedHashMap.put(i, arr[i]);
+    }
+
+    return linkedHashMap;
+}
+
+
+public static <T> LinkedHashMap<Character, T> toCharacterLinkedHashMap(T[] arr) {
+
+    LinkedHashMap<Character, T> linkedHashMap = new LinkedHashMap<>();
+
+    if (arr == null || arr.length == 0) {
+        return linkedHashMap;
+    }
+
+    char key = 'a';
+
+    for (int i = 0; i < arr.length; i++) {
+        linkedHashMap.put(key++, arr[i]);
+    }
+
+    return linkedHashMap;
+}
 
 }

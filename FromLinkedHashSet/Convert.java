@@ -4,6 +4,7 @@ import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.PriorityQueue;
@@ -247,6 +248,45 @@ public class Convert {
         return treemap;
     }
 
+
+    // LinkedHashSet → LinkedHashMap
+
+public static <T> LinkedHashMap<Integer, T> toIntegerLinkedHashMap(
+        LinkedHashSet<T> set) {
+
+    LinkedHashMap<Integer, T> linkedHashMap = new LinkedHashMap<>();
+
+    if (set == null || set.isEmpty()) {
+        return linkedHashMap;
+    }
+
+    int key = 0;
+
+    for (T value : set) {
+        linkedHashMap.put(key++, value);
+    }
+
+    return linkedHashMap;
+}
+
+
+public static <T> LinkedHashMap<Character, T> toCharacterLinkedHashMap(
+        LinkedHashSet<T> set) {
+
+    LinkedHashMap<Character, T> linkedHashMap = new LinkedHashMap<>();
+
+    if (set == null || set.isEmpty()) {
+        return linkedHashMap;
+    }
+
+    char key = 'a';
+
+    for (T value : set) {
+        linkedHashMap.put(key++, value);
+    }
+
+    return linkedHashMap;
+}
 
 
     // LinkedHashSet → HashMap

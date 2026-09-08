@@ -6,7 +6,8 @@
 // import FromPriorityQueue.*;
 // import FromHashSet.*;
 // import FromLinkedHashSet.*;
-import FromTreeSet.*;
+// import FromTreeSet.*;
+import FromHashMap.*;
 import java.util.*;
 
 public class test {
@@ -49,14 +50,14 @@ public class test {
 
 // LinkedHashSet <Character> list = new LinkedHashSet<>(Arrays.asList('a','b','c','d','a'));
 
-TreeSet <Character> list = new TreeSet<>(Arrays.asList('a','b','c','d','a'));
+// TreeSet <Character> list = new TreeSet<>(Arrays.asList('a','b','c','d','a'));
 
-// LinkedHashMap<Character, String> list = new LinkedHashMap<>();
-// list.put(1, "Apple");
-// list.put(2, "Banana");
-// list.put(3, "Banana");
+LinkedHashMap<Integer, Integer> list = new LinkedHashMap<>();
+list.put(1, 111);
+list.put(2, 222);
+list.put(3, 333);
 
-// System.out.println(list); // {1=Apple, 2=Banana}
+System.out.println(list); // {1=Apple, 2=Banana}
 
 
 
@@ -76,20 +77,21 @@ TreeSet <Character> list = new TreeSet<>(Arrays.asList('a','b','c','d','a'));
 
     // System.out.println(list);
 
-        Character[] result1 = Convert.toArray(list, new Character[0]);
-        ArrayList<Character> result2 = Convert.toArrayList(list);
-        Stack<Character>  result3 = Convert.toStack(list);
-        LinkedList<Character> result4 = Convert.toLinkedList(list);
-        Vector<Character> result5 = Convert.toVector(list);
-        ArrayDeque<Character> result6 = Convert.toArrayDeque(list);
-        PriorityQueue<Character> result7 = Convert.toPriorityQueue(list);
-        HashSet<Character> result8 = Convert.toHashSet(list);
-        LinkedHashSet<Character> result9 = Convert.toLinkedHashSet(list);
-        // TreeSet<Character> result10 = Convert.toTreeSet(list);
-        HashMap<Character, Character> result11 = Convert.toCharacterHashMap(list);
-        HashMap<Integer, Character> result12 = Convert.toIntegerHashMap(list);
-        TreeMap<Integer,Character> result13 = Convert.toIntegerTreeMap(list);
-        TreeMap<Character,Character> result14 = Convert.toCharacterTreeMap(list);
+        Integer [] result1 = Convert.toArray(list, new Integer[0]);
+        ArrayList<Integer> result2 = Convert.toArrayList(list);
+        Stack<Integer>  result3 = Convert.toStack(list);
+        LinkedList<Integer> result4 = Convert.toLinkedList(list);
+        Vector<Integer> result5 = Convert.toVector(list);
+        ArrayDeque<Integer> result6 = Convert.toArrayDeque(list);
+        PriorityQueue<Integer> result7 = Convert.toPriorityQueue(list);
+        HashSet<Integer> result8 = Convert.toHashSet(list);
+        LinkedHashSet<Integer> result9 = Convert.toLinkedHashSet(list);
+        TreeSet<Integer> result10 = Convert.toTreeSet(list);
+        // HashMap<Character, Character> result11 = Convert.toCharacterHashMap(list);
+        // HashMap<Integer, Character> result12 = Convert.toIntegerHashMap(list);
+        // TreeMap<Integer,Character> result13 = Convert.toIntegerTreeMap(list);
+        TreeMap<Integer,Integer> result13 = Convert.toTreeMap(list);
+        // TreeMap<Character,Character> result14 = Convert.toCharacterTreeMap(list);
 
 
         System.out.println("array "+Arrays.toString(result1));
@@ -101,10 +103,10 @@ TreeSet <Character> list = new TreeSet<>(Arrays.asList('a','b','c','d','a'));
         System.out.println("PriorityQueue "+result7);
         System.out.println("HashSet "+result8);
         System.out.println("lhs"+result9);
-        // System.out.println("TreeSet"+result10);
-        System.out.println("Character HashMap "+result11);
-        System.out.println("Integer HashMap "+result12);
-        System.out.println("Character TreeMap "+result14);
+        System.out.println("TreeSet"+result10);
+        // System.out.println("Character HashMap "+result11);
+        // System.out.println("Integer HashMap "+result12);
+        // System.out.println("Character TreeMap "+result14);
         System.out.println("Integer TreeMap "+result13);
 
         String str = "Arjun";

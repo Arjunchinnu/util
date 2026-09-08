@@ -232,6 +232,48 @@ public class Convert {
 
 
 
+// ArrayDeque → LinkedHashMap<Integer, T>
+
+public static <T> LinkedHashMap<Integer, T> toIntegerLinkedHashMap(
+        ArrayDeque<T> deque) {
+
+    LinkedHashMap<Integer, T> linkedHashMap = new LinkedHashMap<>();
+
+    if (deque == null || deque.isEmpty()) {
+        return linkedHashMap;
+    }
+
+    int key = 0;
+
+    for (T value : deque) {
+        linkedHashMap.put(key++, value);
+    }
+
+    return linkedHashMap;
+}
+
+
+// ArrayDeque → LinkedHashMap<Character, T>
+
+public static <T> LinkedHashMap<Character, T> toCharacterLinkedHashMap(
+        ArrayDeque<T> deque) {
+
+    LinkedHashMap<Character, T> linkedHashMap = new LinkedHashMap<>();
+
+    if (deque == null || deque.isEmpty()) {
+        return linkedHashMap;
+    }
+
+    char key = 'a';
+
+    for (T value : deque) {
+        linkedHashMap.put(key++, value);
+    }
+
+    return linkedHashMap;
+}
+
+
     // ArrayDeque → HashMap
     // index → element
     // public static <T> HashMap<Integer, T> toHashMap(

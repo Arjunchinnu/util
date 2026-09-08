@@ -228,6 +228,45 @@ public class Convert {
         return treemap;
     }
 
+    // LinkedList → LinkedHashMap<Integer, T>
+    
+    public static <T> LinkedHashMap<Integer, T> toIntegerLinkedHashMap(
+            LinkedList<T> list) {
+    
+        LinkedHashMap<Integer, T> linkedHashMap = new LinkedHashMap<>();
+    
+        if (list == null || list.isEmpty()) {
+            return linkedHashMap;
+        }
+    
+        for (int i = 0; i < list.size(); i++) {
+            linkedHashMap.put(i, list.get(i));
+        }
+    
+        return linkedHashMap;
+    }
+    
+    
+    // LinkedList → LinkedHashMap<Character, T>
+    
+    public static <T> LinkedHashMap<Character, T> toCharacterLinkedHashMap(
+            LinkedList<T> list) {
+    
+        LinkedHashMap<Character, T> linkedHashMap = new LinkedHashMap<>();
+    
+        if (list == null || list.isEmpty()) {
+            return linkedHashMap;
+        }
+    
+        char key = 'a';
+    
+        for (int i = 0; i < list.size(); i++) {
+            linkedHashMap.put(key++, list.get(i));
+        }
+    
+        return linkedHashMap;
+    }
+
 
     // LinkedList → HashMap
     // index → element

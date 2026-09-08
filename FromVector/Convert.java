@@ -227,6 +227,48 @@ public class Convert {
 
 
 
+    
+    // Vector → LinkedHashMap<Integer, T>
+    
+    public static <T> LinkedHashMap<Integer, T> toIntegerLinkedHashMap(
+            Vector<T> vector) {
+    
+        LinkedHashMap<Integer, T> linkedHashMap = new LinkedHashMap<>();
+    
+        if (vector == null || vector.isEmpty()) {
+            return linkedHashMap;
+        }
+    
+        for (int i = 0; i < vector.size(); i++) {
+            linkedHashMap.put(i, vector.get(i));
+        }
+    
+        return linkedHashMap;
+    }
+    
+    
+    // Vector → LinkedHashMap<Character, T>
+    
+    public static <T> LinkedHashMap<Character, T> toCharacterLinkedHashMap(
+            Vector<T> vector) {
+    
+        LinkedHashMap<Character, T> linkedHashMap = new LinkedHashMap<>();
+    
+        if (vector == null || vector.isEmpty()) {
+            return linkedHashMap;
+        }
+    
+        char key = 'a';
+    
+        for (int i = 0; i < vector.size(); i++) {
+            linkedHashMap.put(key++, vector.get(i));
+        }
+    
+        return linkedHashMap;
+    }
+
+
+
     // Vector → HashMap
     // index → element
     // public static <T> HashMap<Integer, T> toHashMap(

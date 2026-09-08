@@ -190,4 +190,44 @@ public class Convert {
 
         return treeMap;
     }
+
+
+    // Stack → LinkedHashMap<Integer, T>
+    
+    public static <T> LinkedHashMap<Integer, T> toIntegerLinkedHashMap(
+            Stack<T> stack) {
+    
+        LinkedHashMap<Integer, T> linkedHashMap = new LinkedHashMap<>();
+    
+        if (stack == null || stack.isEmpty()) {
+            return linkedHashMap;
+        }
+    
+        for (int i = 0; i < stack.size(); i++) {
+            linkedHashMap.put(i, stack.get(i));
+        }
+    
+        return linkedHashMap;
+    }
+    
+    
+    // Stack → LinkedHashMap<Character, T>
+    
+    public static <T> LinkedHashMap<Character, T> toCharacterLinkedHashMap(
+            Stack<T> stack) {
+    
+        LinkedHashMap<Character, T> linkedHashMap = new LinkedHashMap<>();
+    
+        if (stack == null || stack.isEmpty()) {
+            return linkedHashMap;
+        }
+    
+        char key = 'a';
+    
+        for (int i = 0; i < stack.size(); i++) {
+            linkedHashMap.put(key++, stack.get(i));
+        }
+    
+        return linkedHashMap;
+    }
 }

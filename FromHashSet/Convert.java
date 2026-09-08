@@ -230,6 +230,44 @@ public class Convert {
     }
 
 
+    // HashSet → LinkedHashMap
+
+public static <T> LinkedHashMap<Integer, T> toIntegerLinkedHashMap(HashSet<T> set) {
+
+    LinkedHashMap<Integer, T> linkedHashMap = new LinkedHashMap<>();
+
+    if (set == null || set.isEmpty()) {
+        return linkedHashMap;
+    }
+
+    int key = 0;
+
+    for (T value : set) {
+        linkedHashMap.put(key++, value);
+    }
+
+    return linkedHashMap;
+}
+
+
+public static <T> LinkedHashMap<Character, T> toCharacterLinkedHashMap(HashSet<T> set) {
+
+    LinkedHashMap<Character, T> linkedHashMap = new LinkedHashMap<>();
+
+    if (set == null || set.isEmpty()) {
+        return linkedHashMap;
+    }
+
+    char key = 'a';
+
+    for (T value : set) {
+        linkedHashMap.put(key++, value);
+    }
+
+    return linkedHashMap;
+}
+
+
     // // HashSet → HashMap
     // // index → element
     // public static <T> HashMap<Integer, T> toHashMap(HashSet<T> set) {

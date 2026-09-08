@@ -231,6 +231,47 @@ public class Convert {
 
 
 
+// PriorityQueue → LinkedHashMap<Integer, T>
+
+public static <T> LinkedHashMap<Integer, T> toIntegerLinkedHashMap(
+        PriorityQueue<T> queue) {
+
+    LinkedHashMap<Integer, T> linkedHashMap = new LinkedHashMap<>();
+
+    if (queue == null || queue.isEmpty()) {
+        return linkedHashMap;
+    }
+
+    int key = 0;
+
+    for (T value : queue) {
+        linkedHashMap.put(key++, value);
+    }
+
+    return linkedHashMap;
+}
+
+
+// PriorityQueue → LinkedHashMap<Character, T>
+
+public static <T> LinkedHashMap<Character, T> toCharacterLinkedHashMap(
+        PriorityQueue<T> queue) {
+
+    LinkedHashMap<Character, T> linkedHashMap = new LinkedHashMap<>();
+
+    if (queue == null || queue.isEmpty()) {
+        return linkedHashMap;
+    }
+
+    char key = 'a';
+
+    for (T value : queue) {
+        linkedHashMap.put(key++, value);
+    }
+
+    return linkedHashMap;
+}
+
     // // PriorityQueue → HashMap
     // // index → element
     // public static <T> HashMap<Integer, T> toHashMap(
