@@ -1,4 +1,4 @@
-// import FromArray.*;
+import FromArray.*;
 // import FromArrayList.*;
 // import FromLinkedList.*;
 // import FromVector.*;
@@ -7,112 +7,83 @@
 // import FromHashSet.*;
 // import FromLinkedHashSet.*;
 // import FromTreeSet.*;
-import FromHashMap.*;
+// import FromHashMap.*;
 import java.util.*;
 
 public class test {
 
     public static void main(String[] args) {
 
-        // Character[] list = {2, 4, 6, 8};
-        // Character[] list = {'a', 'b', 'c'};
-
-        // System.out.println(Convert.print());
+//Array to other
 
 
-        // Integer[] list = {6,6, 4, 9, 8};
+Integer[] list = {60, 40, 90, 80, 20};
 
-        // Character[] list = {'a','b','c','d'};
+// ArrayList
+ArrayList<Integer> result1 = Convert.toArrayList(list);
 
-        // ArrayList<Character> list = new ArrayList<>(Arrays.asList('a','b','c','d'));
+// Stack
+Stack<Integer> result2 = Convert.toStack(list);
 
-        // LinkedList <Character> list = new LinkedList<>(Arrays.asList('a','b','c','d'));
+// LinkedList
+LinkedList<Integer> result3 = Convert.toLinkedList(list);
 
-    //     Stack<Character> list = new Stack<>();
-    // list.addAll(List.of(60, 60, 40, 90, 80));
+// Vector
+Vector<Integer> result4 = Convert.toVector(list);
 
+// ArrayDeque
+ArrayDeque<Integer> result5 = Convert.toArrayDeque(list);
 
-    // Vector <Character> list = new Vector<>(Arrays.asList('a','b','c','d'));
+// PriorityQueue
+PriorityQueue<Integer> result6 = Convert.toPriorityQueue(list);
 
-    // ArrayDeque <Character> list = new ArrayDeque<>(Arrays.asList('a','b','c','d'));
+// HashSet
+HashSet<Integer> result7 = Convert.toHashSet(list);
 
-    // PriorityQueue <Character> list = new PriorityQueue<>(Arrays.asList('a','b','c','d'));
+// LinkedHashSet
+LinkedHashSet<Integer> result8 = Convert.toLinkedHashSet(list);
 
-    // HashSet <Character> list = new HashSet<>(Arrays.asList('a','b','c','d','a'));
+// TreeSet
+TreeSet<Integer> result9 = Convert.toTreeSet(list);
 
-// HashMap<Character, Character> list = new HashMap<>();
+// HashMap
+HashMap<Integer, Integer> result10 =
+        Convert.toIntegerHashMap(list);
 
-// list.put(1, 60);
-// list.put(2, 60);
-// list.put(3, 40);
-// list.put(4, 90);
-// list.put(5, 80);
+HashMap<Character, Integer> result11 =
+        Convert.toCharacterHashMap(list);
 
-// LinkedHashSet <Character> list = new LinkedHashSet<>(Arrays.asList('a','b','c','d','a'));
+// TreeMap
+TreeMap<Integer, Integer> result12 =
+        Convert.toIntegerTreeMap(list);
 
-// TreeSet <Character> list = new TreeSet<>(Arrays.asList('a','b','c','d','a'));
+TreeMap<Character, Integer> result13 =
+        Convert.toCharacterTreeMap(list);
 
-LinkedHashMap<Integer, Integer> list = new LinkedHashMap<>();
-list.put(1, 111);
-list.put(2, 222);
-list.put(3, 333);
+// LinkedHashMap
+LinkedHashMap<Integer, Integer> result14 =
+        Convert.toIntegerLinkedHashMap(list);
 
-System.out.println(list); // {1=Apple, 2=Banana}
-
-
-
-// LinkedHashMap<Character, Character> list = new LinkedHashMap<>();
-// list.put(1, 60);
-// list.put(2, 90);
-
-// System.out.println(list); // {1=60, 2=90}
-
-
-// TreeMap<Character, Character> list = new TreeMap<>();
-// list.put(1, 60);
-// list.put(2, 90);
-// System.out.println(list); // {1=Apple, 2=Banana}
+LinkedHashMap<Character, Integer> result15 =
+        Convert.toCharacterLinkedHashMap(list);
 
 
-
-    // System.out.println(list);
-
-        Integer [] result1 = Convert.toArray(list, new Integer[0]);
-        ArrayList<Integer> result2 = Convert.toArrayList(list);
-        Stack<Integer>  result3 = Convert.toStack(list);
-        LinkedList<Integer> result4 = Convert.toLinkedList(list);
-        Vector<Integer> result5 = Convert.toVector(list);
-        ArrayDeque<Integer> result6 = Convert.toArrayDeque(list);
-        PriorityQueue<Integer> result7 = Convert.toPriorityQueue(list);
-        HashSet<Integer> result8 = Convert.toHashSet(list);
-        LinkedHashSet<Integer> result9 = Convert.toLinkedHashSet(list);
-        TreeSet<Integer> result10 = Convert.toTreeSet(list);
-        // HashMap<Character, Character> result11 = Convert.toCharacterHashMap(list);
-        // HashMap<Integer, Character> result12 = Convert.toIntegerHashMap(list);
-        // TreeMap<Integer,Character> result13 = Convert.toIntegerTreeMap(list);
-        TreeMap<Integer,Integer> result13 = Convert.toTreeMap(list);
-        // TreeMap<Character,Character> result14 = Convert.toCharacterTreeMap(list);
-
-
-        System.out.println("array "+Arrays.toString(result1));
-        System.out.println("ArrayList "+result2);
-        System.out.println("Stack "+result3);
-        System.out.println("LinkedList "+result4);
-        System.out.println("Vector "+result5);
-        System.out.println("ArrayDeque "+result6);
-        System.out.println("PriorityQueue "+result7);
-        System.out.println("HashSet "+result8);
-        System.out.println("lhs"+result9);
-        System.out.println("TreeSet"+result10);
-        // System.out.println("Character HashMap "+result11);
-        // System.out.println("Integer HashMap "+result12);
-        // System.out.println("Character TreeMap "+result14);
-        System.out.println("Integer TreeMap "+result13);
-
-        String str = "Arjun";
-
-        // System.out.println(str.charAt(1));
-
+// Print
+System.out.println("ArrayList       : " + result1);
+System.out.println("Stack           : " + result2);
+System.out.println("LinkedList      : " + result3);
+System.out.println("Vector          : " + result4);
+System.out.println("ArrayDeque      : " + result5);
+System.out.println("PriorityQueue   : " + result6);
+System.out.println("HashSet         : " + result7);
+System.out.println("LinkedHashSet   : " + result8);
+System.out.println("TreeSet         : " + result9);
+System.out.println("Integer HashMap  : " + result10);
+System.out.println("Character HashMap: " + result11);
+System.out.println("Integer TreeMap  : " + result12);
+System.out.println("Character TreeMap: " + result13);
+System.out.println("Integer LinkedHashMap  : " + result14);
+System.out.println("Character LinkedHashMap: " + result15);
         
     }
 }

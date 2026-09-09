@@ -188,22 +188,134 @@ public class Convert {
         return treeSet;
     }
 
+    
+    // hashmap -> linkedHashMap
 
-    // HashMap → TreeMap
+    // Integer Key
+public static <T> LinkedHashMap<Integer, T> toIntegerLinkedHashMap(
+        HashMap<Integer, T> map) {
 
-    public static <T> TreeMap<Integer, T> toTreeMap(
-            HashMap<Integer, T> map) {
+    LinkedHashMap<Integer, T> linkedHashMap = new LinkedHashMap<>();
 
-        TreeMap<Integer, T> treeMap = new TreeMap<>();
+    if (map == null || map.isEmpty()) {
+        return linkedHashMap;
+    }
 
-        if (map == null || map.isEmpty()) {
-            return treeMap;
-        }
+    for (Map.Entry<Integer, T> entry : map.entrySet()) {
+        linkedHashMap.put(entry.getKey(), entry.getValue());
+    }
 
-        for (Map.Entry<Integer, T> entry : map.entrySet()) {
-            treeMap.put(entry.getKey(), entry.getValue());
-        }
+    return linkedHashMap;
+}
 
+
+// Character Key
+public static <T> LinkedHashMap<Character, T> toCharacterLinkedHashMap(
+        HashMap<Character, T> map) {
+
+    LinkedHashMap<Character, T> linkedHashMap = new LinkedHashMap<>();
+
+    if (map == null || map.isEmpty()) {
+        return linkedHashMap;
+    }
+
+    for (Map.Entry<Character, T> entry : map.entrySet()) {
+        linkedHashMap.put(entry.getKey(), entry.getValue());
+    }
+
+    return linkedHashMap;
+}
+
+
+// String Key
+public static <T> LinkedHashMap<String, T> toStringLinkedHashMap(
+        HashMap<String, T> map) {
+
+    LinkedHashMap<String, T> linkedHashMap = new LinkedHashMap<>();
+
+    if (map == null || map.isEmpty()) {
+        return linkedHashMap;
+    }
+
+    for (Map.Entry<String, T> entry : map.entrySet()) {
+        linkedHashMap.put(entry.getKey(), entry.getValue());
+    }
+
+    return linkedHashMap;
+}
+
+
+    // hashmap -> treemap
+
+// Integer Key
+public static <T> TreeMap<Integer, T> toIntegerTreeMap(
+        HashMap<Integer, T> map) {
+
+    TreeMap<Integer, T> treeMap = new TreeMap<>();
+
+    if (map == null || map.isEmpty()) {
         return treeMap;
     }
+
+    for (Map.Entry<Integer, T> entry : map.entrySet()) {
+        treeMap.put(entry.getKey(), entry.getValue());
+    }
+
+    return treeMap;
+}
+
+
+// Character Key
+public static <T> TreeMap<Character, T> toCharacterTreeMap(
+        HashMap<Character, T> map) {
+
+    TreeMap<Character, T> treeMap = new TreeMap<>();
+
+    if (map == null || map.isEmpty()) {
+        return treeMap;
+    }
+
+    for (Map.Entry<Character, T> entry : map.entrySet()) {
+        treeMap.put(entry.getKey(), entry.getValue());
+    }
+
+    return treeMap;
+}
+
+
+// String Key
+public static <T> TreeMap<String, T> toStringTreeMap(
+        HashMap<String, T> map) {
+
+    TreeMap<String, T> treeMap = new TreeMap<>();
+
+    if (map == null || map.isEmpty()) {
+        return treeMap;
+    }
+
+    for (Map.Entry<String, T> entry : map.entrySet()) {
+        treeMap.put(entry.getKey(), entry.getValue());
+    }
+
+    return treeMap;
+}
+
+
+    // // HashMap → TreeMap
+
+    // public static <T> TreeMap<Integer, T> toTreeMap(
+    //         HashMap<Integer, T> map) {
+
+    //     TreeMap<Integer, T> treeMap = new TreeMap<>();
+
+    //     if (map == null || map.isEmpty()) {
+    //         return treeMap;
+    //     }
+
+    //     for (Map.Entry<Integer, T> entry : map.entrySet()) {
+    //         treeMap.put(entry.getKey(), entry.getValue());
+    //     }
+
+    //     return treeMap;
+    // }
 }

@@ -191,41 +191,160 @@ public class Convert {
     }
 
 
+    
     // TreeMap → HashMap
 
-    public static <K, V> HashMap<K, V> toHashMap(
-            TreeMap<K, V> map) {
 
-        HashMap<K, V> hashMap = new HashMap<>();
+// Integer Key
+public static <T> HashMap<Integer, T> toIntegerHashMap(
+        TreeMap<Integer, T> map) {
 
-        if (map == null || map.isEmpty()) {
-            return hashMap;
-        }
+    HashMap<Integer, T> hashMap = new HashMap<>();
 
-        for (Map.Entry<K, V> entry : map.entrySet()) {
-            hashMap.put(entry.getKey(), entry.getValue());
-        }
-
+    if (map == null || map.isEmpty()) {
         return hashMap;
     }
 
-
-    // TreeMap → LinkedHashMap
-
-    public static <K, V> LinkedHashMap<K, V> toLinkedHashMap(
-            TreeMap<K, V> map) {
-
-        LinkedHashMap<K, V> linkedMap =
-                new LinkedHashMap<>();
-
-        if (map == null || map.isEmpty()) {
-            return linkedMap;
-        }
-
-        for (Map.Entry<K, V> entry : map.entrySet()) {
-            linkedMap.put(entry.getKey(), entry.getValue());
-        }
-
-        return linkedMap;
+    for (Map.Entry<Integer, T> entry : map.entrySet()) {
+        hashMap.put(entry.getKey(), entry.getValue());
     }
+
+    return hashMap;
+}
+
+
+// Character Key
+public static <T> HashMap<Character, T> toCharacterHashMap(
+        TreeMap<Character, T> map) {
+
+    HashMap<Character, T> hashMap = new HashMap<>();
+
+    if (map == null || map.isEmpty()) {
+        return hashMap;
+    }
+
+    for (Map.Entry<Character, T> entry : map.entrySet()) {
+        hashMap.put(entry.getKey(), entry.getValue());
+    }
+
+    return hashMap;
+}
+
+
+// String Key
+public static <T> HashMap<String, T> toStringHashMap(
+        TreeMap<String, T> map) {
+
+    HashMap<String, T> hashMap = new HashMap<>();
+
+    if (map == null || map.isEmpty()) {
+        return hashMap;
+    }
+
+    for (Map.Entry<String, T> entry : map.entrySet()) {
+        hashMap.put(entry.getKey(), entry.getValue());
+    }
+
+    return hashMap;
+}
+
+
+// TreeMap → LinkedHashMap
+
+
+// Integer Key
+public static <T> LinkedHashMap<Integer, T> toIntegerLinkedHashMap(
+        TreeMap<Integer, T> map) {
+
+    LinkedHashMap<Integer, T> linkedHashMap =
+            new LinkedHashMap<>();
+
+    if (map == null || map.isEmpty()) {
+        return linkedHashMap;
+    }
+
+    for (Map.Entry<Integer, T> entry : map.entrySet()) {
+        linkedHashMap.put(entry.getKey(), entry.getValue());
+    }
+
+    return linkedHashMap;
+}
+
+
+// Character Key
+public static <T> LinkedHashMap<Character, T> toCharacterLinkedHashMap(
+        TreeMap<Character, T> map) {
+
+    LinkedHashMap<Character, T> linkedHashMap =
+            new LinkedHashMap<>();
+
+    if (map == null || map.isEmpty()) {
+        return linkedHashMap;
+    }
+
+    for (Map.Entry<Character, T> entry : map.entrySet()) {
+        linkedHashMap.put(entry.getKey(), entry.getValue());
+    }
+
+    return linkedHashMap;
+}
+
+
+// String Key
+public static <T> LinkedHashMap<String, T> toStringLinkedHashMap(
+        TreeMap<String, T> map) {
+
+    LinkedHashMap<String, T> linkedHashMap =
+            new LinkedHashMap<>();
+
+    if (map == null || map.isEmpty()) {
+        return linkedHashMap;
+    }
+
+    for (Map.Entry<String, T> entry : map.entrySet()) {
+        linkedHashMap.put(entry.getKey(), entry.getValue());
+    }
+
+    return linkedHashMap;
+}
+
+
+
+    // // TreeMap → HashMap
+
+    // public static <K, V> HashMap<K, V> toHashMap(
+    //         TreeMap<K, V> map) {
+
+    //     HashMap<K, V> hashMap = new HashMap<>();
+
+    //     if (map == null || map.isEmpty()) {
+    //         return hashMap;
+    //     }
+
+    //     for (Map.Entry<K, V> entry : map.entrySet()) {
+    //         hashMap.put(entry.getKey(), entry.getValue());
+    //     }
+
+    //     return hashMap;
+    // }
+
+
+    // // TreeMap → LinkedHashMap
+
+    // public static <K, V> LinkedHashMap<K, V> toLinkedHashMap(
+    //         TreeMap<K, V> map) {
+
+    //     LinkedHashMap<K, V> linkedMap =
+    //             new LinkedHashMap<>();
+
+    //     if (map == null || map.isEmpty()) {
+    //         return linkedMap;
+    //     }
+
+    //     for (Map.Entry<K, V> entry : map.entrySet()) {
+    //         linkedMap.put(entry.getKey(), entry.getValue());
+    //     }
+
+    //     return linkedMap;
+    // }
 }
